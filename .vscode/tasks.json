@@ -1,0 +1,89 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Verificar proyecto sin tocar datos",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu",
+        "--",
+        "bash",
+        "probar.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Iniciar sistema",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu",
+        "--",
+        "bash",
+        "iniciar.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Actualizar sistema con respaldo",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu",
+        "--",
+        "bash",
+        "actualizar.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Respaldar base de datos",
+      "type": "process",
+      "command": "wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu",
+        "--",
+        "bash",
+        "respaldar.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}

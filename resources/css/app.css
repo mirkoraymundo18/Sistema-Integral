@@ -1,0 +1,883 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+    .erp-sidebar, .erp-topbar, .erp-page-footer, .erp-overlay,
+    .erp-skip, .reservation-no-print, .erp-form-alert { display: none !important; }
+    .erp-workspace { margin: 0 !important; padding: 0 !important; }
+    .erp-content { padding: 0 !important; }
+    .erp-app { background: white !important; color: black !important; }
+    .reservation-record { max-width: none !important; }
+    .reservation-record .catalog-panel { box-shadow: none !important; break-inside: avoid; }
+    .reservation-record .kardex-heading { display: block; }
+}
+
+@layer components {
+    .catalog {
+        @apply mx-auto grid w-full max-w-[1440px] gap-6 text-slate-900;
+    }
+
+    .catalog-narrow {
+        @apply w-full max-w-3xl;
+    }
+
+    .catalog-heading {
+        @apply flex flex-wrap items-center justify-between gap-4;
+    }
+
+    .catalog-heading h1 {
+        @apply my-1 break-words text-2xl font-bold tracking-tight sm:text-3xl;
+    }
+
+    .catalog h2 {
+        @apply text-base font-semibold;
+    }
+
+    .catalog-heading p, .catalog-help, .catalog-empty p {
+        @apply text-sm text-slate-600;
+    }
+
+    .catalog-heading .catalog-eyebrow {
+        @apply break-words text-xs font-semibold uppercase tracking-wider text-blue-700;
+    }
+
+    .catalog-actions {
+        @apply flex flex-wrap items-center gap-2;
+    }
+
+    .catalog-button {
+        @apply inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
+    }
+
+    .catalog-primary {
+        @apply border-blue-700 bg-blue-700 text-white shadow-sm hover:bg-blue-800;
+    }
+
+    .catalog-link, .catalog-product {
+        @apply w-fit text-sm font-semibold text-blue-700 underline-offset-4 hover:underline;
+    }
+
+    .catalog-product {
+        @apply text-slate-900;
+    }
+
+    .catalog-stats {
+        @apply grid grid-cols-2 gap-3 lg:grid-cols-4;
+    }
+
+    .catalog-stat, .catalog-panel {
+        @apply min-w-0 rounded-2xl border border-slate-200 bg-white shadow-sm;
+    }
+
+    .catalog-stat {
+        @apply grid content-start gap-1 px-5 py-5 text-sm text-slate-600;
+    }
+
+    .catalog-stat strong, .catalog-stat dd {
+        @apply break-words text-2xl font-semibold tracking-tight tabular-nums text-slate-900;
+    }
+
+    .catalog-filters {
+        @apply flex flex-wrap items-end gap-3 border-b border-slate-100 bg-slate-50/60 p-5;
+    }
+
+    .catalog-filters label:first-child {
+        @apply min-w-0 flex-1 basis-56;
+    }
+
+    .catalog-filters label {
+        @apply min-w-0 max-w-full;
+    }
+
+    .catalog label {
+        @apply block text-sm font-medium text-slate-700;
+    }
+
+    .catalog input:not([type=hidden]):not([type=radio]), .catalog select, .catalog textarea {
+        @apply mt-1 block w-full min-h-11 rounded-xl border-slate-200 bg-slate-50 text-base text-slate-900 focus:border-blue-600 focus:bg-white focus:ring-blue-600 sm:text-sm;
+    }
+
+    .catalog input[readonly] {
+        @apply bg-slate-100 text-slate-600;
+    }
+
+    .catalog-table-wrap {
+        @apply overflow-x-auto;
+    }
+
+    .catalog-table {
+        min-width: 680px;
+        @apply w-full text-left text-sm;
+    }
+
+    .catalog-table th, .catalog-table td {
+        @apply px-5 py-4;
+    }
+
+    .catalog-table th {
+        @apply whitespace-nowrap bg-slate-50 text-xs font-semibold text-slate-600;
+    }
+
+    .catalog-table td {
+        @apply border-t border-slate-100;
+    }
+
+    .catalog-table td small {
+        @apply mt-0.5 block text-xs text-slate-600;
+    }
+
+    .catalog-table tbody tr:hover {
+        @apply bg-slate-50;
+    }
+
+    .catalog-price {
+        @apply whitespace-nowrap tabular-nums;
+    }
+
+    .catalog-badge {
+        @apply inline-flex whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-semibold;
+    }
+
+    .catalog-good, .catalog-notice {
+        @apply bg-emerald-50 text-emerald-800;
+    }
+
+    .catalog-warning {
+        @apply bg-amber-100 text-amber-900;
+    }
+
+    .catalog-danger {
+        @apply bg-rose-50 text-rose-800;
+    }
+
+    .catalog-notice {
+        @apply rounded-lg border border-emerald-200 p-3 text-sm;
+    }
+
+    .catalog-empty {
+        @apply grid justify-items-center gap-2 px-5 py-12 text-center;
+    }
+
+    .catalog-body, .catalog-pagination {
+        @apply p-4 sm:p-5;
+    }
+
+    .catalog-form {
+        @apply grid content-start gap-4 p-4 sm:p-6;
+    }
+
+    .catalog-form-fields {
+        @apply grid gap-3;
+    }
+
+    .catalog-form-fields button {
+        @apply justify-self-start;
+    }
+
+    .catalog-fields {
+        @apply grid min-w-0 gap-4 sm:grid-cols-2;
+    }
+
+    .catalog-settings-list > li {
+        @apply break-words border-t border-slate-200 py-2 text-sm;
+    }
+
+    .catalog-settings-list summary {
+        @apply cursor-pointer font-medium;
+    }
+
+    .catalog-settings-list form {
+        @apply mt-2;
+    }
+
+    .catalog-code {
+        @apply ml-1 inline-flex rounded bg-slate-100 px-1.5 py-0.5 font-mono text-xs text-slate-700;
+    }
+}
+
+@layer components {
+    .kardex-heading {
+        @apply flex flex-wrap items-center justify-between gap-4 pb-2;
+    }
+
+    .kardex-heading h1 {
+        @apply my-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl;
+    }
+
+    .kardex-heading p {
+        @apply text-sm text-slate-700;
+    }
+
+    .kardex-heading .catalog-eyebrow {
+        @apply text-xs font-semibold uppercase tracking-wider text-slate-500;
+    }
+
+    .kardex-register {
+        @apply grid overflow-hidden lg:grid-cols-[minmax(0,1fr)_minmax(15rem,32%)];
+    }
+
+    .kardex-operation legend {
+        @apply mb-2 text-sm font-medium text-slate-700;
+    }
+
+    .kardex-operation-choices, .kardex-product-fields {
+        @apply grid gap-3 sm:grid-cols-2;
+    }
+
+    .catalog .kardex-mode {
+        @apply flex min-w-0 cursor-pointer items-center gap-3 rounded-lg border border-slate-300 p-3 hover:bg-slate-50;
+    }
+
+    .catalog .kardex-mode:has(input:checked) {
+        @apply border-blue-600 bg-blue-50 text-blue-900;
+    }
+
+    .kardex-mode input {
+        @apply h-4 w-4 shrink-0 text-blue-700 focus:ring-blue-600;
+    }
+
+    .kardex-mode small {
+        @apply mt-0.5 block text-xs font-normal text-slate-600;
+    }
+
+    .kardex-preview {
+        @apply border-t border-slate-200 bg-slate-50 p-5 sm:p-6 lg:border-l lg:border-t-0;
+    }
+
+    .kardex-balances {
+        @apply my-4 grid gap-2;
+    }
+
+    .kardex-balances > div {
+        @apply flex flex-wrap items-baseline justify-between gap-x-3 rounded-lg bg-white px-3 py-2 text-sm text-slate-700;
+    }
+
+    .kardex-balances dd {
+        @apply break-words font-semibold tabular-nums text-slate-900;
+    }
+
+    .kardex-balances > .kardex-total {
+        @apply bg-blue-100 font-medium text-blue-900;
+    }
+
+    .kardex-total dd {
+        @apply text-base text-blue-900;
+    }
+
+    .kardex-alert {
+        @apply rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900;
+    }
+
+    .kardex-alert-error {
+        @apply border-red-200 bg-red-50 text-red-800;
+    }
+}
+
+@layer components {
+    .dashboard-grid {
+        @apply grid items-start gap-5 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)];
+    }
+
+    .dashboard-section {
+        @apply grid min-w-0 content-start gap-4;
+    }
+
+    .dashboard-legend, .dashboard-legend span {
+        @apply flex flex-wrap items-center gap-2;
+    }
+
+    .dashboard-legend i {
+        @apply h-2.5 w-2.5 rounded-full;
+    }
+
+    .dashboard-entry {
+        @apply bg-blue-600;
+    }
+
+    .dashboard-exit {
+        @apply bg-amber-600;
+    }
+
+    .dashboard-chart > li {
+        @apply grid grid-cols-[4.5rem_minmax(0,1fr)] items-center gap-2 border-t border-slate-100 py-2 sm:gap-4;
+    }
+
+    .dashboard-month {
+        @apply text-sm font-medium text-slate-700;
+    }
+
+    .dashboard-bars {
+        @apply grid gap-1;
+    }
+
+    .dashboard-bars a {
+        @apply flex items-center gap-2 rounded px-1 py-0.5 text-sm tabular-nums text-slate-700 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600;
+    }
+
+    .dashboard-track {
+        @apply block h-2 flex-1 overflow-hidden rounded-full bg-slate-100;
+    }
+
+    .dashboard-track > span {
+        @apply block h-full rounded-full;
+    }
+
+    .dashboard-bars strong {
+        @apply min-w-[2ch] text-right;
+    }
+
+    .dashboard-action, .dashboard-restock {
+        @apply flex flex-wrap items-center justify-between gap-2 rounded-lg bg-slate-50 px-3 py-2 text-sm text-slate-800 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600;
+    }
+
+    .dashboard-restock small {
+        @apply block text-xs text-slate-600;
+    }
+}
+
+
+@layer base {
+    [x-cloak] { display: none !important; }
+    html { scroll-padding-top: 90px; }
+    body { font-feature-settings: "cv11", "ss01"; }
+    button, input, select, textarea { font: inherit; }
+    button:disabled { cursor: wait; opacity: .65; }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; }
+    }
+}
+
+@layer components {
+    .erp-app {
+        @apply min-h-screen bg-[#f5f7fb] text-slate-800;
+    }
+
+    .erp-icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    .erp-skip {
+        @apply fixed left-4 top-4 z-[70] -translate-y-24 rounded-lg bg-white px-4 py-2 font-semibold text-blue-800 focus:translate-y-0;
+    }
+
+    .erp-sidebar {
+        @apply fixed inset-y-0 left-0 z-50 flex w-[264px] -translate-x-full flex-col bg-[#14213a] text-slate-200 transition-transform duration-200 lg:translate-x-0;
+    }
+
+    .erp-brand {
+        @apply flex items-center gap-3 px-6 py-7;
+    }
+
+    .erp-brand-symbol {
+        @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-blue-200;
+    }
+
+    .erp-brand-symbol .erp-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .erp-brand strong {
+        @apply block text-sm font-semibold tracking-tight text-white;
+    }
+
+    .erp-brand small {
+        @apply mt-1 block text-xs text-slate-400;
+    }
+
+    .erp-navigation {
+        @apply flex-1 space-y-6 overflow-y-auto px-4 py-3;
+    }
+
+    .erp-nav-label {
+        @apply mb-2 px-3 text-[11px] font-semibold uppercase tracking-[.14em] text-slate-400;
+    }
+
+    .erp-nav-group {
+        @apply space-y-1;
+    }
+
+    .erp-nav-link {
+        @apply flex min-h-11 items-center gap-3 rounded-xl px-3 py-3 text-[13px] font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-300;
+    }
+
+    .erp-nav-link .erp-icon { @apply text-slate-400; }
+    .erp-nav-link.is-active { @apply bg-blue-600 text-white shadow-sm; }
+    .erp-nav-link.is-active .erp-icon { @apply text-blue-100; }
+    .erp-nav-dot { @apply ml-auto h-1.5 w-1.5 rounded-full bg-blue-100; }
+    .erp-sidebar-open { @apply translate-x-0; }
+
+    .erp-sidebar-footer {
+        @apply border-t border-white/10 p-4;
+    }
+
+    .erp-account {
+        @apply flex items-center gap-3 rounded-xl p-2 hover:bg-white/5 focus-visible:outline focus-visible:outline-blue-300;
+    }
+
+    .erp-avatar {
+        @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-sm font-semibold uppercase text-blue-900;
+    }
+
+    .erp-account strong { @apply block break-words text-xs font-semibold text-white; }
+    .erp-account small { @apply mt-1 block text-xs text-slate-400; }
+
+    .erp-logout {
+        @apply mt-3 flex min-h-10 w-full items-center gap-3 rounded-xl px-3 py-2 text-xs font-medium text-slate-400 hover:bg-white/5 hover:text-white;
+    }
+
+    .erp-workspace { @apply min-w-0 lg:ml-[264px]; }
+    .erp-topbar {
+        @apply sticky top-0 z-20 flex min-h-[72px] flex-wrap items-center justify-between gap-3 border-b border-slate-200/80 bg-white px-4 py-3 sm:px-7 lg:px-9;
+    }
+
+    .erp-topbar-location { @apply flex min-w-0 items-center gap-3 text-sm; }
+    .erp-topbar-location strong { @apply font-semibold text-slate-800; }
+    .erp-topbar-parent, .erp-separator { @apply hidden text-slate-400 sm:inline; }
+    .erp-location { @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-600; }
+    .erp-location > span { @apply h-1.5 w-1.5 rounded-full bg-emerald-600; }
+
+    .erp-content { @apply px-4 py-6 sm:px-7 sm:py-8 lg:px-9; }
+    .erp-legacy-header { @apply mx-auto mb-6 max-w-[1440px]; }
+    .erp-form-alert { @apply mx-auto mb-5 max-w-[1440px] rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800; }
+    .erp-form-alert ul { @apply mt-2 list-disc pl-5; }
+    .erp-page-footer { @apply mx-auto mt-9 flex max-w-[1440px] flex-wrap items-center justify-between gap-2 border-t border-slate-200 pt-4 text-xs text-slate-500; }
+    .erp-overlay { @apply fixed inset-0 z-40 bg-slate-950/40 lg:hidden; }
+    .erp-mobile-toggle, .erp-mobile-close { @apply flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-600 lg:hidden; }
+    .erp-mobile-close { @apply absolute right-2 top-2 h-7 w-7 border-0 text-slate-300; }
+
+    .catalog > .catalog-heading .catalog-eyebrow,
+    .catalog > .kardex-heading .catalog-eyebrow { @apply text-[11px] tracking-[.13em] text-slate-500; }
+    .catalog > .catalog-heading h1,
+    .catalog > .kardex-heading h1 { @apply font-semibold; }
+    .catalog-table tbody tr { transition: background-color .15s; }
+    .catalog-pagination { @apply border-t border-slate-100; }
+    .catalog-panel > summary { @apply rounded-2xl; }
+    .catalog-actions { row-gap: .5rem; }
+    .catalog-button { transition: background-color .15s, border-color .15s, box-shadow .15s; }
+
+    .erp-auth { @apply min-h-screen bg-[#f5f7fb] text-slate-800; }
+    .erp-auth-layout { @apply min-h-screen lg:grid lg:grid-cols-2; }
+    .erp-auth-intro { @apply flex flex-col bg-[#14213a] text-slate-200; }
+    .erp-auth-intro .erp-brand { @apply lg:px-12 lg:py-10; }
+    .erp-auth-message { @apply hidden flex-1 flex-col justify-center px-12 pb-16 lg:flex xl:px-20; }
+    .erp-auth-eyebrow { @apply mb-5 text-xs font-semibold uppercase tracking-[.18em] text-blue-200; }
+    .erp-auth-message h2 { @apply mb-6 text-4xl font-semibold leading-tight tracking-tight text-white xl:text-5xl; }
+    .erp-auth-message > p:last-of-type { @apply max-w-md text-base leading-relaxed text-slate-300; }
+    .erp-auth-features { @apply mt-9 flex flex-wrap gap-3; }
+    .erp-auth-features span { @apply rounded-full border border-white/15 px-4 py-2 text-xs text-slate-300; }
+    .erp-auth-caption { @apply hidden px-12 pb-10 text-xs text-slate-400 lg:block; }
+    .erp-auth-form { @apply flex flex-col items-center justify-center px-5 py-10 sm:px-12; }
+    .erp-auth-card { @apply w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-9; }
+    .erp-auth-card h1 { @apply font-semibold; }
+    .erp-auth-card input:not([type=checkbox]) { @apply min-h-11 rounded-xl border-slate-200 bg-slate-50 focus:bg-white; }
+    .erp-auth-help { @apply mt-6 text-center text-xs text-slate-500; }
+}
+
+
+/* Commercial documents and guided reservations */
+@layer components {
+    .reservation-document-layout { @apply grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_280px]; }
+    .reservation-paper { @apply min-w-0 overflow-hidden rounded-2xl border border-slate-200 bg-white px-5 py-7 text-slate-800 shadow-sm sm:px-10 sm:py-10; overflow-wrap: anywhere; }
+    .reservation-letterhead { @apply flex flex-wrap items-center justify-between gap-5 border-b-2 border-slate-900 pb-6; }
+    .reservation-brand { @apply flex items-center gap-3; }
+    .reservation-brand-mark { @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white; }
+    .reservation-brand-mark svg { @apply h-7 w-7; }
+    .reservation-brand strong { @apply block text-base font-semibold tracking-tight sm:text-lg; }
+    .reservation-brand span:not(.reservation-brand-mark) { @apply mt-1 block text-xs text-slate-500; }
+    .reservation-document-code { @apply text-left sm:text-right; }
+    .reservation-document-code span { @apply block text-[10px] font-bold tracking-[.2em] text-slate-500; }
+    .reservation-document-code strong { @apply mt-1 block text-sm tracking-wide text-slate-900; }
+    .reservation-document-heading { @apply flex flex-wrap items-start justify-between gap-4 py-7; }
+    .reservation-caption { @apply text-[10px] font-bold uppercase tracking-[.2em] text-blue-700; }
+    .reservation-document-heading h2 { @apply mt-2 text-3xl font-semibold tracking-tight text-slate-900; }
+    .reservation-document-heading p:last-child { @apply mt-2 text-xs text-slate-500; }
+    .reservation-document-section { @apply border-t border-slate-100 py-5; }
+    .reservation-document-section h3 { @apply mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900; }
+    .reservation-document-section h3 span { @apply text-[10px] tracking-wider text-blue-700; }
+    .reservation-data-grid { @apply grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2; }
+    .reservation-wide { @apply sm:col-span-2; }
+    .reservation-data-grid dt, .reservation-summary-data dt { @apply text-xs text-slate-500; }
+    .reservation-data-grid dd { @apply mt-1 text-sm font-medium; }
+    .reservation-agreement { @apply my-2 grid gap-5 rounded-xl border border-blue-100 bg-blue-50 p-5 sm:grid-cols-2; }
+    .reservation-agreement span { @apply block text-xs text-slate-600; }
+    .reservation-agreement strong { @apply my-1 block text-xl font-semibold tracking-tight text-slate-900; }
+    .reservation-agreement small { @apply text-xs text-slate-600; }
+    .reservation-conditions { @apply whitespace-pre-wrap text-sm leading-relaxed; }
+    .reservation-document-footer { @apply mt-6 grid gap-4 border-t border-slate-200 pt-5; }
+    .reservation-document-footer div span { @apply block text-[10px] uppercase tracking-wider text-slate-500; }
+    .reservation-document-footer strong { @apply mt-1 block text-xs font-medium; }
+    .reservation-document-footer p { @apply max-w-xl text-[11px] leading-relaxed text-slate-500; }
+    .reservation-document-footer > span { @apply text-[10px] text-slate-400; }
+    .reservation-side-help { @apply grid min-w-0 gap-4; }
+    .reservation-cancel-summary { @apply cursor-pointer px-5 py-4 text-sm font-semibold text-red-700; }
+    .reservation-cancelled-note { @apply my-3 rounded-lg border border-red-100 bg-red-50 p-4 text-sm text-red-800; }
+    .reservation-cancelled-note p { @apply my-1 whitespace-pre-wrap; }
+    .reservation-cancelled-note small { @apply text-xs; }
+    .reservation-form-layout { @apply grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_300px]; }
+    .reservation-steps { @apply grid min-w-0 gap-5; }
+    .reservation-steps fieldset { @apply min-w-0; }
+    .reservation-step-title { @apply mb-1 flex items-start gap-3; }
+    .reservation-step-title > span { @apply flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 text-sm font-bold text-slate-600; }
+    .reservation-step-title > span.is-complete { @apply bg-blue-700 text-white; }
+    .reservation-step-title p { @apply mt-1 text-sm text-slate-500; }
+    .reservation-summary { @apply lg:sticky lg:top-6; }
+    .reservation-summary-data { @apply grid gap-4; overflow-wrap: anywhere; }
+    .reservation-summary-data dd { @apply mt-1 text-sm font-semibold text-slate-800; }
+    .reservation-progress { @apply rounded-lg bg-blue-50 p-3 text-xs font-medium text-blue-800; }
+    .reservation-dialog { @apply w-[calc(100%-2rem)] max-w-lg rounded-2xl border border-slate-200 bg-white p-0 text-slate-900 shadow-xl; max-height: 90dvh; }
+    .reservation-dialog::backdrop { background: rgb(15 23 42 / .55); }
+    .reservation-js-only[hidden] { display: none !important; }
+    [data-reservation-submit]:disabled { cursor: wait; opacity: .65; }
+}
+@media print {
+    @page { size: A4; margin: 14mm; }
+    .reservation-document-layout { display: block !important; }
+    .reservation-paper { border: 0 !important; border-radius: 0 !important; padding: 0 !important; box-shadow: none !important; overflow: visible !important; font-size: 10pt; }
+    .reservation-letterhead { flex-wrap: nowrap; }
+    .reservation-brand-mark { background: #14213a !important; color: white !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .reservation-document-code { text-align: right; }
+    .reservation-document-section, .reservation-agreement, .reservation-document-footer, .reservation-letterhead { break-inside: avoid; }
+    .reservation-data-grid, .reservation-agreement { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .reservation-wide { grid-column: span 2 / span 2; }
+    .reservation-agreement { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .reservation-document-heading { padding: 18px 0; }
+    .reservation-document-section { padding: 14px 0; }
+}
+
+@layer components {
+    .erp-backbar { @apply mx-auto mb-5 flex w-full max-w-[1440px] items-center; }
+    .erp-backbar .catalog-button { @apply gap-2; }
+}
+
+@layer components {
+    .sale-summary-stats, .commercial-dashboard-stats, .dashboard-main-stats { @apply grid-cols-1 sm:grid-cols-2 xl:grid-cols-4; }
+}
+
+/* Unified operations dashboard and financing */
+@layer components {
+    .finance-config { @apply grid min-w-0 gap-5; }
+    .finance-preview { @apply min-w-0 rounded-xl border border-blue-100 bg-blue-50/40 p-4; }
+    .finance-preview-table { @apply mt-3 rounded-lg border border-slate-200 bg-white; max-height: 22rem; overflow-y: auto; }
+    [data-finance-mode][hidden], [data-finance-preview][hidden] { display: none !important; }
+    .erp-dashboard { @apply gap-6; }
+    .dash-hero { @apply flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-[#14213a] px-6 py-7 text-white sm:px-8; }
+    .dash-kicker { @apply mb-2 text-xs font-medium uppercase tracking-[.14em] text-blue-200; }
+    .dash-hero h1 { @apply text-3xl font-semibold tracking-tight; }
+    .dash-hero > div > p:last-child { @apply mt-2 text-sm leading-relaxed text-slate-300; }
+    .dash-hero-actions { @apply flex flex-wrap gap-2; }
+    .dash-hero-primary, .dash-hero-secondary { @apply inline-flex min-h-11 items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold; }
+    .dash-hero-primary { @apply bg-blue-600 text-white hover:bg-blue-500; }
+    .dash-hero-secondary { @apply border border-white/20 text-white hover:bg-white/10; }
+    .dash-filter { @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm; }
+    .dash-filter-grid { @apply grid min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-3; }
+    .dash-filter > .catalog-actions { @apply justify-between; }
+    .dash-period { @apply mt-3 text-xs leading-relaxed text-slate-500; }
+    .dash-period strong { @apply font-medium text-slate-700; }
+    .dash-kpis { @apply grid gap-4 sm:grid-cols-2 xl:grid-cols-4; }
+    .dash-kpi { @apply flex min-w-0 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-blue-200; }
+    .dash-kpi-top { @apply flex items-center justify-between gap-3 text-sm font-medium text-slate-600; }
+    .dash-kpi-top svg { @apply h-9 w-9 shrink-0 rounded-xl bg-blue-50 p-2 text-blue-600; }
+    .dash-kpi > strong, .dash-money strong { @apply mt-5 block text-2xl font-semibold tracking-tight text-slate-900; overflow-wrap: anywhere; }
+    .dash-money strong + strong { @apply mt-1; }
+    .dash-kpi > small { @apply mt-3 block text-xs leading-relaxed text-slate-500; }
+    .dash-main-grid { @apply grid items-stretch gap-6 xl:grid-cols-[minmax(0,1.65fr)_minmax(0,1fr)]; }
+    .dash-lower-grid { @apply grid items-start gap-6 lg:grid-cols-2; }
+    .dash-panel { @apply min-w-0 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6; }
+    .dash-panel-heading { @apply mb-5 flex flex-wrap items-start justify-between gap-3; }
+    .dash-section-label { @apply mb-2 text-[10px] font-semibold uppercase tracking-[.14em] text-slate-500; }
+    .erp-dashboard .dash-panel h2 { @apply text-base font-semibold tracking-tight text-slate-900; }
+    .dash-panel-heading > div > p:last-child:not(.dash-section-label) { @apply mt-1 text-xs leading-relaxed text-slate-500; }
+    .dash-legend { @apply mb-5 gap-5 text-xs text-slate-500; }
+    .erp-dashboard .dashboard-chart { @apply m-0; max-height: 26rem; overflow-y: auto; }
+    .erp-dashboard .dashboard-chart > li { @apply border-slate-100 py-3; }
+    .erp-dashboard .dashboard-entry { background: #2563eb; }
+    .erp-dashboard .dashboard-exit { background: #94a3b8; }
+    .erp-dashboard .dashboard-track { @apply bg-slate-100; }
+    .dash-task { @apply flex items-center justify-between gap-3 border-b border-slate-100 py-4 text-sm text-slate-700; }
+    .dash-task small { @apply mt-1 block text-xs text-slate-500; }
+    .dash-task > strong { @apply flex h-9 min-w-9 items-center justify-center rounded-lg bg-slate-100 px-2 text-sm font-semibold text-slate-800; }
+    .dash-task-alert > strong { @apply bg-red-50 text-red-700; }
+    .dash-balances { @apply mt-5 grid gap-1 rounded-xl bg-slate-50 p-4; }
+    .dash-balances > span { @apply text-xs text-slate-500; }
+    .dash-balances > strong { @apply text-sm font-semibold text-slate-800; overflow-wrap: anywhere; }
+    .dash-list-item { @apply flex min-w-0 flex-wrap items-center gap-3 border-b border-slate-100 py-4; }
+    .dash-list-detail { @apply min-w-0 flex-1; }
+    .dash-list-detail > strong { @apply block text-sm font-medium leading-relaxed text-slate-800; overflow-wrap: anywhere; }
+    .dash-list-detail > small { @apply mt-1 block text-xs text-slate-500; }
+    .dash-list-value { @apply text-sm font-semibold text-slate-800; }
+    .dash-list-value > small { @apply font-normal text-slate-500; }
+    .dash-date { @apply flex w-11 shrink-0 flex-col items-center rounded-xl bg-blue-50 py-2 text-blue-700; }
+    .dash-date strong { @apply text-base font-semibold; }
+    .dash-date small { @apply text-[10px] uppercase; }
+    .dash-empty { @apply py-6 text-sm leading-relaxed text-slate-500; }
+    .dash-footer-link { @apply mt-5 inline-flex text-xs font-semibold text-blue-700; }
+    .dash-table-panel { @apply overflow-hidden !p-0; }
+    .dash-table-panel > .catalog-body { @apply px-6 py-5; }
+    .dash-footer { @apply flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500; }
+    .dash-footer a { @apply font-medium text-blue-700; }
+}
+
+@layer components { .dash-filter-grid.is-custom { @apply xl:grid-cols-4; } }
+
+@layer components {
+    .payment-preview { @apply grid min-w-0 gap-3 rounded-xl border border-blue-100 bg-blue-50/40 p-4; }
+    .payment-preview-table { @apply rounded-lg border border-slate-200 bg-white; max-height: 20rem; overflow-y: auto; }
+    .payment-review-list { @apply grid gap-2 text-sm text-slate-700; max-height: 18rem; overflow-y: auto; }
+    [data-sale-payment] input[readonly] { @apply bg-slate-100 font-semibold text-slate-800; }
+    [data-payment-count][hidden] { display: none !important; }
+    [data-payment-submit]:disabled { @apply cursor-wait opacity-60; }
+    #payment-section { scroll-margin-top: 1.5rem; }
+}
+
+@layer components {
+    .collection-navigation { @apply flex flex-wrap gap-2 rounded-2xl border border-slate-200 bg-white p-3; }
+    .collection-navigation a { @apply rounded-lg px-4 py-3 text-sm font-semibold text-slate-600 transition hover:bg-blue-50 hover:text-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600; }
+    .collection-section { scroll-margin-top: 1.5rem; }
+    .collection-balance-grid { @apply grid gap-3 sm:grid-cols-3; }
+    .collection-balance-grid > div { @apply grid content-start gap-2 rounded-xl border border-slate-100 bg-slate-50 p-5; }
+    .collection-balance-grid span, .collection-balance-grid small { @apply text-xs leading-relaxed text-slate-500; }
+    .collection-balance-grid strong { @apply text-2xl font-semibold tracking-tight text-slate-900; overflow-wrap: anywhere; }
+    .collection-balance-grid .collection-balance-due { @apply border-blue-100 bg-blue-50; }
+    .collection-balance-due strong { @apply text-blue-800; }
+    .collection-row-actions { @apply grid justify-items-start gap-3; }
+    .collection-next { @apply flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-blue-100 bg-blue-50 p-5; }
+    .collection-next h2 { @apply text-base font-semibold text-slate-900; }
+    .collection-next p { @apply mt-1 text-sm leading-relaxed text-slate-600; }
+    #sale-schedule, #payment-history { scroll-margin-top: 1.5rem; }
+}
+
+/* Collection workspace: calm summary, focused form and separate records. */
+@layer components {
+    .pay-workspace { @apply gap-6; }
+    .pay-page-heading { @apply flex flex-wrap items-start justify-between gap-4; }
+    .pay-page-heading h1 { @apply text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl; }
+    .pay-page-heading > div > p:last-child { @apply mt-2 text-sm text-slate-600; }
+    .pay-page-heading > div > p:last-child span { @apply text-slate-400; }
+    .pay-page-heading .catalog-button { @apply text-xs; }
+    .pay-page-heading .catalog-button:not(.catalog-primary) { @apply bg-white; }
+    .pay-overview { @apply grid min-w-0 gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]; }
+    .pay-balance-card, .pay-property-card { @apply min-w-0 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6; }
+    .pay-balance-card { @apply border-blue-100; background: linear-gradient(130deg, #f5f8ff, #fff 80%); }
+    .pay-balance-heading { @apply flex flex-wrap items-center justify-between gap-2; }
+    .pay-balance-heading > span:first-child { @apply text-xs font-medium text-slate-500; }
+    .pay-balance-amount { @apply mt-4 block text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl; overflow-wrap: anywhere; }
+    .pay-progress-label { @apply mt-5 flex justify-between text-xs text-slate-500; }
+    .pay-progress-label strong { @apply font-medium text-slate-700; }
+    .pay-progress { @apply mt-2 h-1.5 overflow-hidden rounded-full bg-slate-100; }
+    .pay-progress span { @apply block h-full rounded-full bg-blue-600; }
+    .pay-totals { @apply mt-5 grid grid-cols-2 gap-4 border-t border-slate-100 pt-4; }
+    .pay-totals dt, .pay-property-data dt { @apply text-xs text-slate-500; }
+    .pay-totals dd { @apply mt-1 text-sm font-semibold text-slate-800; overflow-wrap: anywhere; }
+    .pay-property-card h2 { @apply mt-2 text-lg font-semibold tracking-tight text-slate-800; }
+    .pay-property-card > p:not(.catalog-eyebrow) { @apply mt-1 text-xs leading-relaxed text-slate-500; }
+    .pay-property-data { @apply my-5 grid grid-cols-2 gap-x-4 gap-y-3; }
+    .pay-property-data dd { @apply mt-1 text-sm font-medium text-slate-700; overflow-wrap: anywhere; }
+    .pay-property-card > a { @apply text-xs; }
+    .pay-tabs { @apply flex min-w-0 gap-1 overflow-x-auto border-b border-slate-200; }
+    .pay-tabs a { @apply inline-flex min-h-12 shrink-0 items-center gap-2 border-b-2 border-transparent px-3 pb-3 pt-2 text-sm font-medium text-slate-500 transition hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600 sm:px-5; }
+    .pay-tabs a[aria-selected="true"], .pay-tabs a[aria-current="page"] { @apply border-blue-600 text-blue-700; }
+    .pay-tabs svg { @apply h-4 w-4; }
+    [data-payment-tabs] a { @apply flex-1 justify-center px-2 text-xs sm:flex-none sm:px-5 sm:text-sm; }
+    [data-payment-tabs] svg { @apply hidden sm:block; }
+    .pay-tab-count { @apply rounded-md bg-slate-100 px-1.5 py-0.5 text-[10px] text-slate-500; }
+    .pay-panel { @apply min-w-0; }
+    .pay-panel[hidden] { display: none !important; }
+    .pay-section-heading { @apply mb-5 flex flex-wrap items-center justify-between gap-3; }
+    .pay-section-heading h2 { @apply text-lg font-semibold tracking-tight text-slate-900; }
+    .pay-section-heading p { @apply mt-1 text-xs leading-relaxed text-slate-500; }
+    .pay-safe-label { @apply text-xs text-slate-400; }
+    .pay-form-layout { @apply grid min-w-0 items-start gap-5 xl:grid-cols-[minmax(0,1.65fr)_minmax(0,1fr)]; }
+    .pay-fields-card { @apply min-w-0 gap-0 rounded-2xl border border-slate-200 bg-white !p-0; }
+    .pay-fieldset { @apply m-0 min-w-0 border-0 p-5 sm:p-6; }
+    .pay-fieldset + .pay-fieldset { @apply border-t border-slate-100; }
+    .pay-fieldset legend { @apply float-left mb-4 flex w-full items-center gap-3 text-sm font-semibold text-slate-800; }
+    .pay-fieldset legend + * { clear: both; }
+    .pay-fieldset legend span { @apply inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-xs font-semibold text-blue-700; }
+    .pay-fieldset-help { @apply mb-4 text-xs leading-relaxed text-slate-500; }
+    .pay-fieldset .catalog-fields { @apply items-start gap-4; }
+    .pay-fieldset label { @apply text-xs font-medium text-slate-600; }
+    .pay-fieldset label small { @apply text-[11px] font-normal leading-relaxed text-slate-400; }
+    .pay-fieldset input, .pay-fieldset select, .pay-fieldset textarea { @apply min-w-0 rounded-xl border-slate-200 text-sm font-normal text-slate-800 shadow-none; }
+    .pay-fieldset input, .pay-fieldset select { @apply min-h-11; }
+    .pay-fieldset .pay-amount-input { @apply text-lg font-semibold; }
+    .pay-fieldset > label { @apply mt-4; }
+    .pay-review-card { @apply grid min-w-0 gap-4 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 xl:sticky xl:top-5; }
+    .pay-review-card h3 { @apply -mb-2 text-xs font-medium text-slate-500; }
+    .pay-review-amount { @apply text-3xl font-semibold tracking-tight text-slate-900; overflow-wrap: anywhere; }
+    .pay-review-description { @apply text-xs leading-relaxed text-slate-500; }
+    .pay-review-balance { @apply rounded-xl border border-blue-100 bg-blue-50/60 px-4 py-3 text-xs font-medium leading-relaxed text-blue-800; }
+    .pay-allocation-details { @apply min-w-0 border-y border-slate-100 py-3; }
+    .pay-allocation-details summary { @apply cursor-pointer text-xs font-medium text-slate-600; }
+    .pay-allocation-details .payment-preview-table { @apply mt-3 border-slate-100; max-height: 15rem; }
+    .pay-allocation-details .catalog-table { min-width: 32rem; }
+    .pay-submit { @apply w-full rounded-xl py-3; }
+    .pay-review-note { @apply text-center text-[11px] leading-relaxed text-slate-400; }
+    .pay-success { @apply flex flex-wrap items-center justify-between gap-3 rounded-xl border border-emerald-100 bg-emerald-50 p-4 text-sm text-emerald-900; }
+    .pay-success strong { @apply font-medium; }
+    .pay-success p { @apply mt-1 text-xs text-emerald-700; }
+    .pay-confirm-dialog { @apply rounded-2xl; }
+    .pay-confirm-client { @apply text-xs text-slate-500; }
+    .pay-confirm-amount { @apply rounded-xl bg-slate-50 p-4 text-lg font-semibold text-slate-900; }
+    .pay-record-details { @apply rounded-xl border border-slate-200 bg-white px-5 py-4 text-xs text-slate-500; }
+    .pay-record-details summary { @apply cursor-pointer font-medium text-slate-600; }
+    .pay-record-details p { @apply mt-3 leading-relaxed; }
+    .pay-footnote { @apply text-[11px] leading-relaxed text-slate-400; }
+    .pay-panel .catalog-table th { @apply bg-slate-50 text-[10px] tracking-wide text-slate-500; }
+    .pay-panel .catalog-table td { @apply py-4 text-xs; }
+    .pay-panel .catalog-table td small { @apply mt-1 text-[11px] leading-relaxed text-slate-400; }
+    .pay-panel .catalog-body h2 { @apply text-base font-semibold; }
+    .pay-panel .catalog-body .catalog-help { @apply text-xs; }
+    .pay-list { @apply overflow-hidden rounded-2xl border border-slate-200 bg-white; }
+    .pay-list .catalog-table th { @apply bg-slate-50 text-[10px] tracking-wide text-slate-500; }
+    .pay-list .catalog-table td { @apply py-5 text-xs; }
+    .pay-list .catalog-table td strong { @apply text-sm font-semibold; }
+    .pay-list .catalog-table td small { @apply mt-1 text-[11px] leading-relaxed text-slate-400; }
+    .pay-list .catalog-button { @apply min-h-9 rounded-lg px-3 py-2 text-xs; }
+    .pay-filterbar { @apply grid gap-4 border-b border-slate-100 p-5 sm:grid-cols-[minmax(0,1fr)_12rem_auto]; }
+    .pay-filterbar label { @apply grid min-w-0 gap-2 text-xs font-medium text-slate-500; }
+    .pay-filterbar input, .pay-filterbar select { @apply min-h-11 w-full min-w-0 rounded-xl border-slate-200 text-sm text-slate-700 shadow-none; }
+    .pay-filterbar > .catalog-actions { @apply items-end; }
+    .pay-list-heading { @apply flex flex-wrap items-center justify-between gap-3 px-5 py-4; }
+    .pay-list-heading h2 { @apply text-sm font-semibold text-slate-700; }
+    .pay-list-heading span { @apply text-xs text-slate-400; }
+    .pay-empty { @apply mx-auto grid max-w-md justify-items-center gap-3 py-10 text-center; }
+    .pay-empty svg { @apply mb-2 h-12 w-12 rounded-2xl bg-slate-50 p-3 text-slate-400; }
+    .pay-empty p { @apply text-xs leading-relaxed text-slate-400; }
+}
+
+@media print {
+    .pay-panel[hidden] { display: block !important; }
+    .pay-panel.reservation-no-print { display: none !important; }
+    .pay-overview { grid-template-columns: 1fr 1fr; }
+    .pay-balance-card, .pay-property-card { break-inside: avoid; }
+}
+
+@layer components {
+    .biz-filter { @apply rounded-2xl border border-slate-200 bg-white p-5; }
+    .biz-range-grid { @apply grid items-end gap-4 sm:grid-cols-2 lg:grid-cols-4; }
+    .biz-range-grid label, .biz-report-filter label, .req-filterbar label { @apply grid min-w-0 gap-2 text-xs font-medium text-slate-500; }
+    .biz-range-grid input, .biz-range-grid select, .biz-report-filter input, .biz-report-filter select, .req-filterbar input, .req-filterbar select { @apply min-h-11 w-full min-w-0 rounded-xl border-slate-200 text-sm text-slate-700 shadow-none; }
+    .biz-range-footer { @apply mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4; }
+    .biz-range-footer nav { @apply flex flex-wrap gap-2; }
+    .biz-range-footer a { @apply rounded-lg px-3 py-2 text-xs font-medium text-slate-500 hover:bg-slate-50; }
+    .biz-range-footer a[aria-current="page"] { @apply bg-blue-50 text-blue-700; }
+    .biz-range-footer p { @apply text-[11px] text-slate-400; }
+    .biz-kpis { @apply grid min-w-0 gap-4 sm:grid-cols-2 xl:grid-cols-4; }
+    .biz-kpi { @apply flex min-w-0 flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-blue-200; }
+    .biz-kpi-cash { @apply border-blue-200 bg-blue-50/40; }
+    .biz-kpi-label { @apply flex items-start justify-between gap-2 text-xs font-medium text-slate-600; }
+    .biz-kpi-label small { @apply rounded bg-slate-100 px-1.5 py-0.5 text-[9px] font-normal uppercase tracking-wide text-slate-500; }
+    .biz-kpi > strong, .biz-kpi-money strong { @apply mt-5 block text-2xl font-semibold tracking-tight text-slate-900; overflow-wrap: anywhere; }
+    .biz-kpi-money strong + strong { @apply mt-1; }
+    .biz-kpi > strong em { @apply text-base font-normal not-italic text-slate-400; }
+    .biz-kpi-extra { @apply mt-3 grid gap-1 text-[11px] leading-relaxed text-slate-400; }
+    .biz-pulse { @apply grid overflow-hidden rounded-2xl border border-slate-200 bg-white sm:grid-cols-2 xl:grid-cols-4; }
+    .biz-pulse > div, .biz-pulse > a { @apply grid min-w-0 gap-2 border-b border-slate-100 p-5 sm:border-r; }
+    .biz-pulse span { @apply text-xs text-slate-500; }
+    .biz-pulse strong { @apply text-xl font-semibold tracking-tight text-slate-800; }
+    .biz-pulse small { @apply text-[10px] leading-relaxed text-slate-400; }
+    .biz-main-grid { @apply grid min-w-0 items-stretch gap-6 xl:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]; }
+    .biz-cash-chart { @apply min-w-0; max-height: 25rem; overflow-y: auto; }
+    .biz-cash-chart + .biz-cash-chart { @apply mt-5 border-t border-slate-100 pt-4; }
+    .biz-chart-currency { @apply mb-3 text-[10px] font-semibold uppercase tracking-wider text-slate-400; }
+    .biz-cash-row { @apply grid min-w-0 items-center gap-3 border-b border-slate-100 py-4 text-xs; grid-template-columns: 6.5rem minmax(0,1fr) 5.5rem; }
+    .biz-cash-row > span { @apply leading-relaxed text-slate-500; }
+    .biz-cash-row > i { @apply block h-2 min-w-0 overflow-hidden rounded-full bg-slate-100; }
+    .biz-cash-row b { @apply block h-full rounded-full bg-blue-600 transition-colors; }
+    .biz-cash-row:hover b { @apply bg-blue-500; }
+    .biz-cash-row > strong { @apply text-right text-xs font-semibold text-slate-800; overflow-wrap: anywhere; }
+    .biz-panel-note { @apply mt-4 text-[10px] leading-relaxed text-slate-400; }
+    .biz-lot-legend { @apply mb-2 flex flex-wrap gap-2 text-[10px] text-slate-500; }
+    .biz-lot-legend span { @apply rounded-md bg-slate-50 px-2 py-1; }
+    .biz-project-row { @apply flex min-w-0 items-center justify-between gap-4 border-b border-slate-100 py-4; }
+    .biz-project-row > div { @apply min-w-0; }
+    .biz-project-row strong { @apply block text-xs font-medium text-slate-800; overflow-wrap: anywhere; }
+    .biz-project-row small { @apply mt-1 block text-[10px] text-slate-400; }
+    .biz-project-row > span { @apply shrink-0 text-right text-[10px] text-slate-500; }
+    .biz-project-row b { @apply text-base font-semibold text-slate-800; }
+    .biz-timeline-table { max-height: 28rem; overflow-y: auto; }
+    .biz-dashboard .catalog-table th { @apply text-[10px] text-slate-500; }
+    .biz-dashboard .catalog-table td { @apply text-xs; }
+    .biz-dashboard .catalog-table td small { @apply mt-1 text-[10px] text-slate-400; }
+    .biz-overdue { @apply mt-3 rounded-lg bg-red-50 p-3 text-xs font-medium text-red-700; }
+    .biz-storage > summary { @apply cursor-pointer text-sm font-semibold text-slate-700; }
+    .biz-storage > summary span { @apply ml-2 text-[11px] font-normal text-slate-400; }
+    .biz-storage > .dash-legend { @apply mt-5; }
+    .biz-cash-totals { @apply flex flex-wrap gap-4; }
+    .biz-cash-totals > div { @apply min-w-0 rounded-xl border border-slate-200 bg-white p-5; }
+    .biz-cash-totals span { @apply block text-xs text-slate-500; }
+    .biz-cash-totals strong { @apply mt-2 block text-xl font-semibold text-slate-900; }
+    .biz-report-filter { @apply grid items-end gap-4 border-b border-slate-100 p-5 sm:grid-cols-2 xl:grid-cols-[1fr_1fr_8rem_1.5fr_auto]; }
+
+    .req-workspace { @apply gap-5; }
+    .req-status-strip { @apply grid grid-cols-2 overflow-hidden rounded-2xl border border-slate-200 bg-white lg:grid-cols-4; }
+    .req-status-strip a { @apply flex items-center justify-between gap-3 border-b border-r border-slate-100 px-5 py-4 text-xs text-slate-500 transition hover:bg-slate-50; }
+    .req-status-strip strong { @apply text-xl font-semibold text-slate-800; }
+    .req-status-strip a[aria-current="page"] { @apply bg-blue-50 text-blue-700; }
+    .req-status-strip a[aria-current="page"] strong { @apply text-blue-700; }
+    .req-compose { @apply min-w-0 rounded-2xl border border-slate-200 bg-white; scroll-margin-top: 1.5rem; }
+    .req-compose > summary { @apply cursor-pointer px-5 py-4 text-sm font-medium text-slate-700; }
+    .req-compose > summary span { @apply ml-3 hidden text-xs font-normal text-slate-400 sm:inline; }
+    .req-compose > form { @apply border-t border-slate-100; }
+    .req-compose label { @apply text-xs text-slate-600; }
+    .req-form-tip { @apply self-end pb-3 text-xs; }
+    .req-stock-hint { @apply rounded-xl border border-blue-100 bg-blue-50/60 p-3 text-xs leading-relaxed text-blue-800; }
+    .req-inbox { @apply min-w-0 overflow-hidden rounded-2xl border border-slate-200 bg-white; }
+    .req-inbox-heading { @apply flex flex-wrap items-center justify-between gap-3 px-5 py-4; }
+    .req-inbox-heading h2 { @apply text-sm font-semibold text-slate-800; }
+    .req-inbox-heading p { @apply mt-1 text-[11px] text-slate-400; }
+    .req-filterbar { @apply grid items-end gap-4 border-y border-slate-100 bg-slate-50/50 p-5 sm:grid-cols-[minmax(0,1fr)_10rem_auto]; }
+    .req-filterbar > .catalog-actions { @apply items-center; }
+    .req-date-filter { @apply col-span-full; }
+    .req-date-filter summary { @apply cursor-pointer text-[11px] font-medium text-slate-500; }
+    .req-date-filter .catalog-fields { @apply mt-3; }
+    .req-columns { @apply hidden gap-4 border-b border-slate-100 bg-slate-50/60 px-5 py-3 text-[10px] font-medium uppercase tracking-wide text-slate-400 xl:grid; grid-template-columns: minmax(0,2fr) 6rem minmax(0,1.1fr) 8rem 5rem; }
+    .req-item { @apply min-w-0 border-b border-slate-100; scroll-margin-top: 1.5rem; }
+    .req-item:last-child { @apply border-b-0; }
+    .req-row-summary { @apply grid min-w-0 cursor-pointer items-center gap-x-4 gap-y-3 px-5 py-4 transition hover:bg-slate-50/70; grid-template-columns: minmax(0,1fr) auto; list-style: none; }
+    .req-row-summary::-webkit-details-marker { display: none; }
+    .req-material { @apply grid min-w-0 gap-1; }
+    .req-material > strong { @apply text-sm font-medium leading-relaxed text-slate-800; overflow-wrap: anywhere; }
+    .req-material small { @apply text-[10px] text-slate-400; }
+    .req-material small:first-child { @apply font-medium text-blue-600; }
+    .req-quantity { @apply text-xs text-slate-500; }
+    .req-quantity strong { @apply font-semibold text-slate-800; }
+    .req-person { @apply col-start-1 grid gap-1; }
+    .req-person strong { @apply text-xs font-normal text-slate-600; }
+    .req-person small { @apply text-[10px] text-slate-400; }
+    .req-state { @apply col-start-1 grid justify-items-start gap-1; }
+    .req-state small { @apply text-[10px]; }
+    .req-manage { @apply col-start-2 text-xs font-medium text-blue-700; grid-row: 2 / 4; }
+    .req-manage > span { @apply ml-1 inline-block transition-transform; }
+    .req-item[open] { @apply bg-slate-50/40; }
+    .req-item[open] > summary .req-manage > span { transform: rotate(180deg); }
+    .req-detail-grid { @apply grid min-w-0 gap-6 border-t border-slate-100 p-5 lg:grid-cols-2; }
+    .req-detail-copy { @apply min-w-0; }
+    .req-detail-copy h3 { @apply mt-2 text-sm font-medium leading-relaxed text-slate-700; overflow-wrap: anywhere; }
+    .req-timeline { @apply mt-5 grid gap-4 border-l border-slate-200 pl-4; }
+    .req-timeline li { @apply relative grid gap-1; }
+    .req-timeline li::before { content: ''; @apply absolute -left-[21px] top-1 h-2 w-2 rounded-full bg-blue-300; }
+    .req-timeline strong { @apply text-xs font-medium text-slate-600; }
+    .req-timeline span, .req-timeline p { @apply text-[11px] leading-relaxed text-slate-400; }
+    .req-action-card { @apply grid min-w-0 content-start justify-items-start gap-3 rounded-xl border border-slate-200 bg-white p-4; }
+    .req-action-card h3 { @apply text-sm font-semibold text-slate-700; }
+    .req-action-card p { @apply text-xs leading-relaxed text-slate-500; }
+    .req-action-card > form { @apply grid w-full gap-3; }
+    .req-action-card label { @apply text-xs text-slate-600; }
+    .req-action-card .catalog-button { @apply min-h-10 text-xs; }
+    .req-stock-warning { @apply rounded-lg bg-amber-50 p-3; }
+}
+
+@screen xl {
+    .req-row-summary { grid-template-columns: minmax(0,2fr) 6rem minmax(0,1.1fr) 8rem 5rem; }
+    .req-person, .req-state, .req-manage { grid-column: auto; grid-row: auto; }
+}
+
+@media (max-width: 420px) {
+    .biz-cash-row { grid-template-columns: 4.8rem minmax(0,1fr) 4.8rem; gap: .5rem; }
+    .biz-cash-row > span, .biz-cash-row > strong { font-size: 10px; }
+}

@@ -1,0 +1,10 @@
+services:
+    laravel.test:
+        volumes:
+            - 'sail-vendor:/var/www/html/vendor'
+    scheduler:
+        volumes:
+            - 'sail-vendor:/var/www/html/vendor'
+volumes:
+    sail-vendor:
+        driver: local

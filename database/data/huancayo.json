@@ -1,0 +1,1106 @@
+{
+  "nota": "Datos ficticios para presentación académica; DNI no consultados en RENIEC, proyectos y precios no verificados. No equivalen a existencias físicas de un almacén.",
+  "clientes": [
+    {
+      "dni": "72300267",
+      "nombres": "Valeria Lucía",
+      "apellidos": "Quispe Huamán",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200001",
+      "clave": "cliente-01"
+    },
+    {
+      "dni": "72887797",
+      "nombres": "Diego Alonso",
+      "apellidos": "Mendoza Rojas",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200002",
+      "clave": "cliente-02"
+    },
+    {
+      "dni": "75535981",
+      "nombres": "Camila Fernanda",
+      "apellidos": "Torres Poma",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200003",
+      "clave": "cliente-03"
+    },
+    {
+      "dni": "71465503",
+      "nombres": "Adrián Mateo",
+      "apellidos": "Vargas Salazar",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200004",
+      "clave": "cliente-04"
+    },
+    {
+      "dni": "79871035",
+      "nombres": "Luciana Isabel",
+      "apellidos": "Huamán Flores",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200005",
+      "clave": "cliente-05"
+    },
+    {
+      "dni": "78868454",
+      "nombres": "Joaquín André",
+      "apellidos": "Cerrón Ramos",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200006",
+      "clave": "cliente-06"
+    },
+    {
+      "dni": "74991077",
+      "nombres": "Mariana Sofía",
+      "apellidos": "Paredes Soto",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200007",
+      "clave": "cliente-07"
+    },
+    {
+      "dni": "70824387",
+      "nombres": "Sebastián Elías",
+      "apellidos": "Rojas Cárdenas",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200008",
+      "clave": "cliente-08"
+    },
+    {
+      "dni": "76323738",
+      "nombres": "Daniela Alejandra",
+      "apellidos": "Espinoza León",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200009",
+      "clave": "cliente-09"
+    },
+    {
+      "dni": "73985123",
+      "nombres": "Gabriel Esteban",
+      "apellidos": "Poma Gutiérrez",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200010",
+      "clave": "cliente-10"
+    },
+    {
+      "dni": "72507977",
+      "nombres": "Renata Abigail",
+      "apellidos": "Sánchez Rivera",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200011",
+      "clave": "cliente-11"
+    },
+    {
+      "dni": "77973593",
+      "nombres": "Nicolás Eduardo",
+      "apellidos": "Castro Palacios",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200012",
+      "clave": "cliente-12"
+    },
+    {
+      "dni": "72079120",
+      "nombres": "Andrea Milagros",
+      "apellidos": "López Quispe",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200013",
+      "clave": "cliente-13"
+    },
+    {
+      "dni": "76005587",
+      "nombres": "Álvaro Joaquín",
+      "apellidos": "Ramos Medina",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200014",
+      "clave": "cliente-14"
+    },
+    {
+      "dni": "71447495",
+      "nombres": "Paula Antonella",
+      "apellidos": "Cárdenas Torres",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200015",
+      "clave": "cliente-15"
+    },
+    {
+      "dni": "75417862",
+      "nombres": "Bruno Rafael",
+      "apellidos": "Salazar Núñez",
+      "telefono": null,
+      "email": null,
+      "direccion": null,
+      "dni_anterior": "74200016",
+      "clave": "cliente-16"
+    }
+  ],
+  "proyectos": [
+    {
+      "nombre": "Residencial Valle del Mantaro",
+      "ubicacion": "Pilcomayo, Huancayo, Junín",
+      "descripcion": "Proyecto propuesto para presentación académica del sistema. No representa una oferta inmobiliaria verificada.",
+      "lotes": [
+        {
+          "manzana": "A",
+          "numero": "01",
+          "area_m2": 100,
+          "precio_total": 42000,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "02",
+          "area_m2": 110,
+          "precio_total": 45800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "03",
+          "area_m2": 120,
+          "precio_total": 49600,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "04",
+          "area_m2": 125,
+          "precio_total": 51500,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "05",
+          "area_m2": 140,
+          "precio_total": 57200,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "06",
+          "area_m2": 160,
+          "precio_total": 64800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "01",
+          "area_m2": 100,
+          "precio_total": 44000,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "02",
+          "area_m2": 110,
+          "precio_total": 47800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "03",
+          "area_m2": 120,
+          "precio_total": 51600,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "04",
+          "area_m2": 125,
+          "precio_total": 53500,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "05",
+          "area_m2": 140,
+          "precio_total": 59200,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "06",
+          "area_m2": 160,
+          "precio_total": 66800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        }
+      ]
+    },
+    {
+      "nombre": "Los Jardines de El Tambo",
+      "ubicacion": "El Tambo, Huancayo, Junín",
+      "descripcion": "Proyecto propuesto para presentación académica del sistema. No representa una oferta inmobiliaria verificada.",
+      "lotes": [
+        {
+          "manzana": "A",
+          "numero": "01",
+          "area_m2": 100,
+          "precio_total": 54000,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "02",
+          "area_m2": 110,
+          "precio_total": 57800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "03",
+          "area_m2": 120,
+          "precio_total": 61600,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "04",
+          "area_m2": 125,
+          "precio_total": 63500,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "05",
+          "area_m2": 140,
+          "precio_total": 69200,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "06",
+          "area_m2": 160,
+          "precio_total": 76800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "01",
+          "area_m2": 100,
+          "precio_total": 56000,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "02",
+          "area_m2": 110,
+          "precio_total": 59800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "03",
+          "area_m2": 120,
+          "precio_total": 63600,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "04",
+          "area_m2": 125,
+          "precio_total": 65500,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "05",
+          "area_m2": 140,
+          "precio_total": 71200,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "06",
+          "area_m2": 160,
+          "precio_total": 78800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        }
+      ]
+    },
+    {
+      "nombre": "Alameda del Sur",
+      "ubicacion": "Chilca, Huancayo, Junín",
+      "descripcion": "Proyecto propuesto para presentación académica del sistema. No representa una oferta inmobiliaria verificada.",
+      "lotes": [
+        {
+          "manzana": "A",
+          "numero": "01",
+          "area_m2": 100,
+          "precio_total": 45000,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "02",
+          "area_m2": 110,
+          "precio_total": 48800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "03",
+          "area_m2": 120,
+          "precio_total": 52600,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "04",
+          "area_m2": 125,
+          "precio_total": 54500,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "05",
+          "area_m2": 140,
+          "precio_total": 60200,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "A",
+          "numero": "06",
+          "area_m2": 160,
+          "precio_total": 67800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "01",
+          "area_m2": 100,
+          "precio_total": 47000,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "02",
+          "area_m2": 110,
+          "precio_total": 50800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "03",
+          "area_m2": 120,
+          "precio_total": 54600,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "04",
+          "area_m2": 125,
+          "precio_total": 56500,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "05",
+          "area_m2": 140,
+          "precio_total": 62200,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        },
+        {
+          "manzana": "B",
+          "numero": "06",
+          "area_m2": 160,
+          "precio_total": 69800,
+          "moneda": "PEN",
+          "estado": "DISPONIBLE",
+          "partida_registral": null,
+          "observaciones": "Ficha referencial para presentación académica. Ubicación y disponibilidad de un predio real pendientes de verificación."
+        }
+      ]
+    }
+  ],
+  "unidades": [
+    {
+      "nombre": "Unidad",
+      "simbolo": "und.",
+      "permite_decimales": false
+    },
+    {
+      "nombre": "Bolsa",
+      "simbolo": "bolsa",
+      "permite_decimales": false
+    },
+    {
+      "nombre": "Kilogramo",
+      "simbolo": "kg",
+      "permite_decimales": true
+    },
+    {
+      "nombre": "Metro",
+      "simbolo": "m",
+      "permite_decimales": true
+    },
+    {
+      "nombre": "Metro cuadrado",
+      "simbolo": "m²",
+      "permite_decimales": true
+    },
+    {
+      "nombre": "Metro cúbico",
+      "simbolo": "m³",
+      "permite_decimales": true
+    },
+    {
+      "nombre": "Rollo",
+      "simbolo": "rollo",
+      "permite_decimales": false
+    },
+    {
+      "nombre": "Galón",
+      "simbolo": "gal",
+      "permite_decimales": false
+    },
+    {
+      "nombre": "Caja",
+      "simbolo": "caja",
+      "permite_decimales": false
+    },
+    {
+      "nombre": "Par",
+      "simbolo": "par",
+      "permite_decimales": false
+    },
+    {
+      "nombre": "Juego",
+      "simbolo": "juego",
+      "permite_decimales": false
+    },
+    {
+      "nombre": "Litro",
+      "simbolo": "L",
+      "permite_decimales": true
+    }
+  ],
+  "productos": [
+    {
+      "nombre": "Cemento Portland puzolánico de 42,5 kg",
+      "familia": "Materiales de construcción",
+      "prefijo": "MAT",
+      "unidad": "Bolsa",
+      "precio_unitario": 31.5,
+      "stock_inicial": 80,
+      "stock_minimo": 20
+    },
+    {
+      "nombre": "Ladrillo pandereta de 12 huecos",
+      "familia": "Materiales de construcción",
+      "prefijo": "MAT",
+      "unidad": "Unidad",
+      "precio_unitario": 1.2,
+      "stock_inicial": 1200,
+      "stock_minimo": 300
+    },
+    {
+      "nombre": "Varilla corrugada de 3/8 de pulgada x 9 m",
+      "familia": "Materiales de construcción",
+      "prefijo": "MAT",
+      "unidad": "Unidad",
+      "precio_unitario": 25.5,
+      "stock_inicial": 75,
+      "stock_minimo": 20
+    },
+    {
+      "nombre": "Alambre recocido N.° 16",
+      "familia": "Materiales de construcción",
+      "prefijo": "MAT",
+      "unidad": "Kilogramo",
+      "precio_unitario": 7.8,
+      "stock_inicial": 100,
+      "stock_minimo": 25
+    },
+    {
+      "nombre": "Clavo para construcción de 3 pulgadas",
+      "familia": "Materiales de construcción",
+      "prefijo": "MAT",
+      "unidad": "Kilogramo",
+      "precio_unitario": 7.2,
+      "stock_inicial": 40,
+      "stock_minimo": 10
+    },
+    {
+      "nombre": "Adhesivo para cerámico de 25 kg",
+      "familia": "Materiales de construcción",
+      "prefijo": "MAT",
+      "unidad": "Bolsa",
+      "precio_unitario": 24,
+      "stock_inicial": 6,
+      "stock_minimo": 10
+    },
+    {
+      "nombre": "Arena gruesa para concreto",
+      "familia": "Agregados para obra",
+      "prefijo": "AGR",
+      "unidad": "Metro cúbico",
+      "precio_unitario": 85,
+      "stock_inicial": 12,
+      "stock_minimo": 3
+    },
+    {
+      "nombre": "Arena fina para tarrajeo",
+      "familia": "Agregados para obra",
+      "prefijo": "AGR",
+      "unidad": "Metro cúbico",
+      "precio_unitario": 90,
+      "stock_inicial": 10,
+      "stock_minimo": 3
+    },
+    {
+      "nombre": "Piedra chancada de 1/2 pulgada",
+      "familia": "Agregados para obra",
+      "prefijo": "AGR",
+      "unidad": "Metro cúbico",
+      "precio_unitario": 95,
+      "stock_inicial": 14,
+      "stock_minimo": 4
+    },
+    {
+      "nombre": "Hormigón para cimentación",
+      "familia": "Agregados para obra",
+      "prefijo": "AGR",
+      "unidad": "Metro cúbico",
+      "precio_unitario": 80,
+      "stock_inicial": 16,
+      "stock_minimo": 4
+    },
+    {
+      "nombre": "Piedra de zanja seleccionada",
+      "familia": "Agregados para obra",
+      "prefijo": "AGR",
+      "unidad": "Metro cúbico",
+      "precio_unitario": 75,
+      "stock_inicial": 8,
+      "stock_minimo": 2
+    },
+    {
+      "nombre": "Grava para drenaje",
+      "familia": "Agregados para obra",
+      "prefijo": "AGR",
+      "unidad": "Metro cúbico",
+      "precio_unitario": 88,
+      "stock_inicial": 2,
+      "stock_minimo": 3
+    },
+    {
+      "nombre": "Cable THHN de 4 mm² color rojo",
+      "familia": "Material eléctrico",
+      "prefijo": "ELE",
+      "unidad": "Metro",
+      "precio_unitario": 3.8,
+      "stock_inicial": 180,
+      "stock_minimo": 40
+    },
+    {
+      "nombre": "Cable THHN de 6 mm² color negro",
+      "familia": "Material eléctrico",
+      "prefijo": "ELE",
+      "unidad": "Metro",
+      "precio_unitario": 5.4,
+      "stock_inicial": 150,
+      "stock_minimo": 30
+    },
+    {
+      "nombre": "Interruptor simple empotrable",
+      "familia": "Material eléctrico",
+      "prefijo": "ELE",
+      "unidad": "Unidad",
+      "precio_unitario": 7.5,
+      "stock_inicial": 40,
+      "stock_minimo": 10
+    },
+    {
+      "nombre": "Caja octogonal galvanizada de 4 pulgadas",
+      "familia": "Material eléctrico",
+      "prefijo": "ELE",
+      "unidad": "Unidad",
+      "precio_unitario": 3.5,
+      "stock_inicial": 60,
+      "stock_minimo": 15
+    },
+    {
+      "nombre": "Tablero eléctrico de 12 polos",
+      "familia": "Material eléctrico",
+      "prefijo": "ELE",
+      "unidad": "Unidad",
+      "precio_unitario": 85,
+      "stock_inicial": 8,
+      "stock_minimo": 3
+    },
+    {
+      "nombre": "Luminaria LED de 18 W para interior",
+      "familia": "Material eléctrico",
+      "prefijo": "ELE",
+      "unidad": "Unidad",
+      "precio_unitario": 19.5,
+      "stock_inicial": 5,
+      "stock_minimo": 8
+    },
+    {
+      "nombre": "Tubo PVC para agua de 1/2 pulgada x 5 m",
+      "familia": "Instalaciones sanitarias",
+      "prefijo": "SAN",
+      "unidad": "Unidad",
+      "precio_unitario": 13.5,
+      "stock_inicial": 45,
+      "stock_minimo": 10
+    },
+    {
+      "nombre": "Tubo PVC de desagüe de 4 pulgadas x 3 m",
+      "familia": "Instalaciones sanitarias",
+      "prefijo": "SAN",
+      "unidad": "Unidad",
+      "precio_unitario": 38,
+      "stock_inicial": 30,
+      "stock_minimo": 8
+    },
+    {
+      "nombre": "Tee PVC para agua de 1/2 pulgada",
+      "familia": "Instalaciones sanitarias",
+      "prefijo": "SAN",
+      "unidad": "Unidad",
+      "precio_unitario": 1.8,
+      "stock_inicial": 80,
+      "stock_minimo": 20
+    },
+    {
+      "nombre": "Unión PVC para agua de 1/2 pulgada",
+      "familia": "Instalaciones sanitarias",
+      "prefijo": "SAN",
+      "unidad": "Unidad",
+      "precio_unitario": 1.2,
+      "stock_inicial": 100,
+      "stock_minimo": 25
+    },
+    {
+      "nombre": "Pegamento para PVC de 250 ml",
+      "familia": "Instalaciones sanitarias",
+      "prefijo": "SAN",
+      "unidad": "Unidad",
+      "precio_unitario": 12,
+      "stock_inicial": 24,
+      "stock_minimo": 6
+    },
+    {
+      "nombre": "Grifería de lavatorio cromada",
+      "familia": "Instalaciones sanitarias",
+      "prefijo": "SAN",
+      "unidad": "Unidad",
+      "precio_unitario": 55,
+      "stock_inicial": 3,
+      "stock_minimo": 5
+    },
+    {
+      "nombre": "Pintura látex marfil para interiores",
+      "familia": "Pinturas y acabados",
+      "prefijo": "PIN",
+      "unidad": "Galón",
+      "precio_unitario": 48,
+      "stock_inicial": 18,
+      "stock_minimo": 5
+    },
+    {
+      "nombre": "Imprimante blanco para muros",
+      "familia": "Pinturas y acabados",
+      "prefijo": "PIN",
+      "unidad": "Galón",
+      "precio_unitario": 32,
+      "stock_inicial": 16,
+      "stock_minimo": 4
+    },
+    {
+      "nombre": "Thinner estándar para limpieza",
+      "familia": "Pinturas y acabados",
+      "prefijo": "PIN",
+      "unidad": "Litro",
+      "precio_unitario": 9.5,
+      "stock_inicial": 30,
+      "stock_minimo": 8
+    },
+    {
+      "nombre": "Lija para pared grano 120",
+      "familia": "Pinturas y acabados",
+      "prefijo": "PIN",
+      "unidad": "Unidad",
+      "precio_unitario": 1.5,
+      "stock_inicial": 100,
+      "stock_minimo": 20
+    },
+    {
+      "nombre": "Cerámico de piso gris de 45 x 45 cm",
+      "familia": "Pinturas y acabados",
+      "prefijo": "PIN",
+      "unidad": "Metro cuadrado",
+      "precio_unitario": 29,
+      "stock_inicial": 80,
+      "stock_minimo": 20
+    },
+    {
+      "nombre": "Fragua gris de 1 kg",
+      "familia": "Pinturas y acabados",
+      "prefijo": "PIN",
+      "unidad": "Bolsa",
+      "precio_unitario": 6.5,
+      "stock_inicial": 4,
+      "stock_minimo": 8
+    },
+    {
+      "nombre": "Pala de punta con mango de madera",
+      "familia": "Herramientas y fijaciones",
+      "prefijo": "HER",
+      "unidad": "Unidad",
+      "precio_unitario": 38,
+      "stock_inicial": 12,
+      "stock_minimo": 3
+    },
+    {
+      "nombre": "Pico de acero con mango",
+      "familia": "Herramientas y fijaciones",
+      "prefijo": "HER",
+      "unidad": "Unidad",
+      "precio_unitario": 45,
+      "stock_inicial": 10,
+      "stock_minimo": 3
+    },
+    {
+      "nombre": "Carretilla de obra de 90 litros",
+      "familia": "Herramientas y fijaciones",
+      "prefijo": "HER",
+      "unidad": "Unidad",
+      "precio_unitario": 195,
+      "stock_inicial": 6,
+      "stock_minimo": 2
+    },
+    {
+      "nombre": "Nivel de burbuja de 60 cm",
+      "familia": "Herramientas y fijaciones",
+      "prefijo": "HER",
+      "unidad": "Unidad",
+      "precio_unitario": 32,
+      "stock_inicial": 8,
+      "stock_minimo": 2
+    },
+    {
+      "nombre": "Juego de llaves mixtas de 12 piezas",
+      "familia": "Herramientas y fijaciones",
+      "prefijo": "HER",
+      "unidad": "Juego",
+      "precio_unitario": 95,
+      "stock_inicial": 5,
+      "stock_minimo": 2
+    },
+    {
+      "nombre": "Tarugo de nylon de 1/4 de pulgada x 100 unidades",
+      "familia": "Herramientas y fijaciones",
+      "prefijo": "HER",
+      "unidad": "Caja",
+      "precio_unitario": 12,
+      "stock_inicial": 3,
+      "stock_minimo": 5
+    },
+    {
+      "nombre": "Respirador reutilizable de media cara",
+      "familia": "Protección personal",
+      "prefijo": "EPP",
+      "unidad": "Unidad",
+      "precio_unitario": 65,
+      "stock_inicial": 12,
+      "stock_minimo": 4
+    },
+    {
+      "nombre": "Filtro para respirador contra partículas",
+      "familia": "Protección personal",
+      "prefijo": "EPP",
+      "unidad": "Par",
+      "precio_unitario": 28,
+      "stock_inicial": 20,
+      "stock_minimo": 5
+    },
+    {
+      "nombre": "Guantes de cuero para obra",
+      "familia": "Protección personal",
+      "prefijo": "EPP",
+      "unidad": "Par",
+      "precio_unitario": 14,
+      "stock_inicial": 30,
+      "stock_minimo": 10
+    },
+    {
+      "nombre": "Tapones auditivos reutilizables",
+      "familia": "Protección personal",
+      "prefijo": "EPP",
+      "unidad": "Par",
+      "precio_unitario": 5,
+      "stock_inicial": 40,
+      "stock_minimo": 10
+    },
+    {
+      "nombre": "Arnés de seguridad de cuerpo completo",
+      "familia": "Protección personal",
+      "prefijo": "EPP",
+      "unidad": "Unidad",
+      "precio_unitario": 145,
+      "stock_inicial": 5,
+      "stock_minimo": 2
+    },
+    {
+      "nombre": "Careta facial transparente de seguridad",
+      "familia": "Protección personal",
+      "prefijo": "EPP",
+      "unidad": "Unidad",
+      "precio_unitario": 22,
+      "stock_inicial": 2,
+      "stock_minimo": 4
+    },
+    {
+      "nombre": "Cinta de señalización amarilla de 200 m",
+      "familia": "Señalización y seguridad",
+      "prefijo": "SEN",
+      "unidad": "Rollo",
+      "precio_unitario": 18,
+      "stock_inicial": 10,
+      "stock_minimo": 3
+    },
+    {
+      "nombre": "Cono de seguridad de 70 cm",
+      "familia": "Señalización y seguridad",
+      "prefijo": "SEN",
+      "unidad": "Unidad",
+      "precio_unitario": 42,
+      "stock_inicial": 12,
+      "stock_minimo": 4
+    },
+    {
+      "nombre": "Malla de seguridad naranja de 50 m",
+      "familia": "Señalización y seguridad",
+      "prefijo": "SEN",
+      "unidad": "Rollo",
+      "precio_unitario": 75,
+      "stock_inicial": 8,
+      "stock_minimo": 2
+    },
+    {
+      "nombre": "Señal de uso obligatorio de casco",
+      "familia": "Señalización y seguridad",
+      "prefijo": "SEN",
+      "unidad": "Unidad",
+      "precio_unitario": 15,
+      "stock_inicial": 20,
+      "stock_minimo": 5
+    },
+    {
+      "nombre": "Extintor de polvo químico seco de 6 kg",
+      "familia": "Señalización y seguridad",
+      "prefijo": "SEN",
+      "unidad": "Unidad",
+      "precio_unitario": 120,
+      "stock_inicial": 4,
+      "stock_minimo": 2
+    },
+    {
+      "nombre": "Botiquín portátil para obra vacío",
+      "familia": "Señalización y seguridad",
+      "prefijo": "SEN",
+      "unidad": "Unidad",
+      "precio_unitario": 48,
+      "stock_inicial": 1,
+      "stock_minimo": 2
+    }
+  ],
+  "reservas": [
+    {
+      "token": "fe536648-44b7-55f7-a2a9-b318e46a7514",
+      "cliente": "cliente-01",
+      "proyecto": "Residencial Valle del Mantaro",
+      "ubicacion": "Pilcomayo, Huancayo, Junín",
+      "manzana": "A",
+      "numero": "01",
+      "dias_vigencia": 3,
+      "condiciones": "Reserva referencial para presentar el flujo comercial. El precio total no acredita un pago."
+    },
+    {
+      "token": "098f4427-c1b2-595c-a19b-0ac24bc20197",
+      "cliente": "cliente-02",
+      "proyecto": "Residencial Valle del Mantaro",
+      "ubicacion": "Pilcomayo, Huancayo, Junín",
+      "manzana": "A",
+      "numero": "02",
+      "dias_vigencia": 5,
+      "condiciones": "Reserva referencial para presentar el flujo comercial. El precio total no acredita un pago."
+    },
+    {
+      "token": "e7e3693e-586a-5f49-8a8f-b5f65771ce2d",
+      "cliente": "cliente-03",
+      "proyecto": "Los Jardines de El Tambo",
+      "ubicacion": "El Tambo, Huancayo, Junín",
+      "manzana": "A",
+      "numero": "01",
+      "dias_vigencia": 7,
+      "condiciones": "Reserva referencial para presentar el flujo comercial. El precio total no acredita un pago."
+    },
+    {
+      "token": "2dd95b58-3eb2-5daf-af78-0a399a6bb487",
+      "cliente": "cliente-04",
+      "proyecto": "Los Jardines de El Tambo",
+      "ubicacion": "El Tambo, Huancayo, Junín",
+      "manzana": "A",
+      "numero": "02",
+      "dias_vigencia": 10,
+      "condiciones": "Reserva referencial para presentar el flujo comercial. El precio total no acredita un pago."
+    },
+    {
+      "token": "f7636fdf-c888-5880-80a9-723d6231b291",
+      "cliente": "cliente-05",
+      "proyecto": "Alameda del Sur",
+      "ubicacion": "Chilca, Huancayo, Junín",
+      "manzana": "A",
+      "numero": "01",
+      "dias_vigencia": 14,
+      "condiciones": "Reserva referencial para presentar el flujo comercial. El precio total no acredita un pago."
+    },
+    {
+      "token": "b3545ec7-a5e0-5881-8163-007598a75aac",
+      "cliente": "cliente-06",
+      "proyecto": "Alameda del Sur",
+      "ubicacion": "Chilca, Huancayo, Junín",
+      "manzana": "A",
+      "numero": "02",
+      "dias_vigencia": 15,
+      "condiciones": "Reserva referencial para presentar el flujo comercial. El precio total no acredita un pago."
+    }
+  ]
+}

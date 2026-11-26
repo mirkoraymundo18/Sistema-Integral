@@ -1,0 +1,21 @@
+<?php
+return [
+ 'accepted'=>'Debes aceptar :attribute para continuar.',
+ 'required'=>'Completa el campo :attribute.',
+ 'required_if'=>'Completa :attribute para la opción seleccionada.',
+ 'required_with'=>'Completa :attribute junto con :values.',
+ 'string'=>':attribute debe ser un texto.', 'email'=>'Ingresa un correo electrónico válido.',
+ 'integer'=>':attribute debe ser un número entero.', 'numeric'=>':attribute debe ser un número.',
+ 'decimal'=>'Usa hasta dos decimales en :attribute.', 'boolean'=>'Selecciona una opción válida para :attribute.',
+ 'in'=>'Selecciona una opción válida para :attribute.', 'exists'=>'El registro seleccionado en :attribute ya no está disponible.',
+ 'unique'=>'El valor de :attribute ya está registrado.', 'regex'=>'El formato de :attribute no es válido.',
+ 'date'=>'Ingresa una fecha válida en :attribute.', 'date_format'=>'Usa el formato de fecha solicitado en :attribute.',
+ 'after'=>':attribute debe ser posterior a :date.', 'after_or_equal'=>':attribute debe ser igual o posterior a :date.',
+ 'before_or_equal'=>':attribute no puede ser posterior a :date.',
+ 'uuid'=>'El identificador de la operación no es válido. Vuelve a abrir el formulario.',
+ 'confirmed'=>'La confirmación de :attribute no coincide.', 'current_password'=>'La contraseña actual no coincide.',
+ 'min'=>['numeric'=>':attribute debe ser al menos :min.','string'=>':attribute debe tener al menos :min caracteres.','array'=>'Selecciona al menos :min elementos en :attribute.'],
+ 'max'=>['numeric'=>':attribute no puede superar :max.','string'=>':attribute no puede superar :max caracteres.','array'=>'Selecciona como máximo :max elementos en :attribute.'],
+ 'between'=>['numeric'=>':attribute debe estar entre :min y :max.','string'=>':attribute debe tener entre :min y :max caracteres.'],
+ 'attributes'=>['email'=>'correo electrónico','password'=>'contraseña','password_confirmation'=>'confirmación de contraseña','name'=>'nombre','nombre'=>'nombre','dni'=>'DNI','cantidad'=>'cantidad','monto'=>'importe','fecha_pago'=>'fecha del pago','modalidad'=>'modalidad','financing_plan_id'=>'plan de pago','inicial'=>'inicial','primera_cuota'=>'primera cuota','fecha_contado'=>'fecha del pago total','product_id'=>'producto','client_id'=>'cliente','land_lot_id'=>'lote','measurement_unit_id'=>'unidad','product_family_id'=>'familia','stock_minimo'=>'stock mínimo','precio_unitario'=>'precio unitario','precio_acordado'=>'precio acordado','fecha_vencimiento'=>'fecha de vencimiento','desde'=>'fecha inicial','hasta'=>'fecha final','meses'=>'meses','referencia'=>'referencia de operación','modo_pago'=>'tipo de pago','cantidad_cuotas'=>'cantidad de cuotas','confirmacion'=>'la confirmación'],
+];
